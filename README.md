@@ -8,14 +8,8 @@
 
 ## Архитектура
 
-Host (localhost:80)
-|
-v
-nginx container (80)
-|
-v (docker network DNS: "backend")
-backend container (8080)
-
+Host (localhost:80) -> nginx container (80) - > backend container (8080)
+                                 (docker network DNS: "backend")
 
 **Важно:**
 - наружу проброшен **только порт 80** (nginx)
